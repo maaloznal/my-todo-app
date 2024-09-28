@@ -168,7 +168,7 @@ button#restoreDeletedBtn {
     flex-direction: row;
   }
   .item {
-    margin: 0 40px;
+    margin: 0 25px;
     width: 360px;
   }
 }
