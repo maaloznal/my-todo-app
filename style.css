@@ -141,7 +141,8 @@ button#restoreDeletedBtn {
   }
 
   input {
-    width: 400px;
+    
+    width: 350px;
   }
 
   #addbtn {
@@ -167,6 +168,7 @@ button#restoreDeletedBtn {
     flex-direction: row;
   }
   .item {
-    width: 405px;
+    margin: 0 25px;
+    width: 360px;
   }
 }
