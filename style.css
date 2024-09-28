@@ -171,4 +171,7 @@ button#restoreDeletedBtn {
     margin: 0 15px;
     width: 360px;
   }
+  .list {
+    margin: 20px;
+  }
 }
