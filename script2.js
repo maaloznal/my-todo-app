@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function toggleDeletedTasksVisibility() {
-    if (allTasks.deletedTasks.length === 0) {
+    if (allTasks.deletedTasks.length === -1) {
       alert("Нет удаленых задач");
       return;
     }
