@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
       input.value = "";
       ol.appendChild(task);
       saveTasksToLocalStorage();
+      console.log("Задача добавлена в активные:", todo);
+      console.log("Все задачи:", allTasks);
     } else {
       alert("Название задачи не может быть пустым");
     }
@@ -82,6 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
         allTasks.completedTasks.push(taskObj);
         allTasks.activeTasks.splice(taskIndex, 1);
         taskText.classList.add("completed");
+        console.log("Задача перемещена в завершенные:", taskObj);
+        console.log("Все задачи:", allTasks);
       }
     } else {
       if (completedTaskIndex !== -1) {
@@ -90,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
         allTasks.activeTasks.push(taskObj);
         allTasks.completedTasks.splice(completedTaskIndex, 1);
         taskText.classList.remove("completed");
+        console.log("Задача перемещена в активные:", taskObj);
+        console.log("Все задачи:", allTasks);
       }
     }
     saveTasksToLocalStorage();
@@ -111,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (taskObj) {
       allTasks.deletedTasks.push(taskObj);
+      console.log("Задача удалена и перемещена в удаленные:", taskObj);
+      console.log("Все задачи:", allTasks);
     }
 
     task.remove();
@@ -172,9 +180,11 @@ document.addEventListener("DOMContentLoaded", function() {
       allTasks.activeTasks.push(task);
       const taskElement = createTaskElement(task.name);
       ol.appendChild(taskElement);
+      console.log("Задача восстановлена и перемещена в активные:", task);
     });
 
     allTasks.deletedTasks = allTasks.deletedTasks.filter(task => task.completed);
+    console.log("Все задачи после восстановления:", allTasks);
     toggleDeletedTasksVisibility();
     saveTasksToLocalStorage();
   }
@@ -201,5 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
       taskText.classList.add("completed");
       ol.appendChild(taskElement);
     });
+
+    console.log("Задачи загружены из localStorage:", allTasks);
   }
 });
