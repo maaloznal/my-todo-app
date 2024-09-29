@@ -24,6 +24,10 @@ h1 {
   padding: 10px;
   z-index: 1000;
 }
+input:focus {
+  border-color: blue;
+  box-shadow: 1px 1px 2px 0 blue;
+}
 
 input {
   height: 50px;
@@ -135,7 +139,7 @@ button#restoreDeletedBtn {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width:414px) and (max-width:736px) {
+@media screen and (min-width: 414px) and (max-width: 736px) {
   #container {
     display: flex;
     flex-direction: column;
@@ -144,7 +148,7 @@ button#restoreDeletedBtn {
   input {
     width: 350px;
   }
-  
+
   #addbtn {
     width: 170px;
     height: 50px;
@@ -179,5 +183,3 @@ button#restoreDeletedBtn {
     margin: 0 0 0 30px;
   }
 }
-
-
