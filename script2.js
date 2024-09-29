@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
   let isDeletedTasksVisible = false;
 
   addBtn.addEventListener("click", addTask);
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      addTask();
+    }
+  });
   viewDeletedBtn.addEventListener("click", toggleDeletedTasksVisibility);
   restoreDeletedBtn.addEventListener("click", restoreDeletedTasks);
 
