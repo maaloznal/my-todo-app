@@ -145,6 +145,13 @@ button#restoreDeletedBtn {
     flex-direction: column;
   }
 
+}
+input:focus {
+  border-color: blue;
+  box-shadow: 1px 1px 2px 0 blue;
+}
+
+
   input {
     width: 350px;
   }
