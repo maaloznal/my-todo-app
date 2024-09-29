@@ -96,6 +96,7 @@ li.item:hover {
 }
 
 .delete-btn {
+  width: 80px;
   display: flex;
   justify-content: flex-end;
   text-decoration: none;
